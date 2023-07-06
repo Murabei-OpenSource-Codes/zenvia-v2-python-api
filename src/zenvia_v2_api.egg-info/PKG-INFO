@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: zenvia-v2-api
+Version: 0.0
+Summary: Python API to facilitate interaction with Zenvia V2 API
+Home-page: https://github.com/Murabei-OpenSource-Codes/zenvia-v2-python-api
+Author: Murabei Data Science
+Author-email: a.baceti@murabei.com
+License: BSD-3-Clause License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# zenvia-v2-python-api
+Python API to interact with Zenvia API
