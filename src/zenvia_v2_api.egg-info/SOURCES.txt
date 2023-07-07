@@ -2,6 +2,9 @@ LICENSE
 MANIFEST.in
 README.md
 setup.py
+src/zenvia_v2_api/__init__.py
+src/zenvia_v2_api/exceptions.py
+src/zenvia_v2_api/zenvia.py
 src/zenvia_v2_api.egg-info/PKG-INFO
 src/zenvia_v2_api.egg-info/SOURCES.txt
 src/zenvia_v2_api.egg-info/dependency_links.txt
