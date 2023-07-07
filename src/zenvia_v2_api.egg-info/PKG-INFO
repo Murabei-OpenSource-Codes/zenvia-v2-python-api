@@ -6,6 +6,7 @@ Home-page: https://github.com/Murabei-OpenSource-Codes/zenvia-v2-python-api
 Author: Murabei Data Science
 Author-email: a.baceti@murabei.com
 License: BSD-3-Clause License
+Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
 Classifier: Operating System :: OS Independent
 Requires-Python: >=3.6
@@ -62,3 +63,5 @@ zenvia_api.whatsapp_send_templated(
         "deliveryDate": "11/01/2023",
     })
 ```
+
+
