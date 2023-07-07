@@ -385,3 +385,61 @@ class ZenviaAPI:
         return self.request_post(
             endpoint="channels/whatsapp/messages",
             data=data)
+
+    def template_list(self, channel: str = None, sender_id: str = None,
+                      status: str = None, **kwargs) -> list:
+        """
+        List all templates.
+
+        Zenvia API Doc:
+        https://zenvia.github.io/zenvia-openapi-spec/v2/#tag/Templates/paths/~1templates/post
+
+        Args:
+            No Args.
+        Kwargs:
+            channel [str]: Query templates in channel. Must be in ["WHATSAPP",
+                "SMS", "RCS", "EMAIL"].
+            sender_id [str]: Sender's templates.
+            status [str]: Query templates with status. Must be in [
+                "WAITING_REVIEW" "REJECTED" "WAITING_APPROVAL" "APPROVED"
+                "PAUSED" "DISABLED"]
+        Return:
+            List all template on Zenvia.
+        """
+        query_params = {}
+        if channel is not None:
+            if channel not in ["WHATSAPP", "SMS", "RCS", "EMAIL"]:
+                pass
+            else:
+                query_params["channel"] = channel
+
+        if status is not None:
+            if status not in ["WAITING_REVIEW", "REJECTED", "WAITING_APPROVAL",
+                              "APPROVED", "PAUSED", "DISABLED"]:
+                pass
+            else:
+                query_params["status"] = status
+
+        if sender_id is not None:
+            query_params["senderId"] = sender_id
+
+        return self.request_get(
+            endpoint="templates", params=query_params,
+            **kwargs)
+
+    def template_retrieve(self, id: str, **kwargs) -> dict:
+        """
+        Retrieve a template using its it.
+
+        Zenvia API Doc:
+        https://zenvia.github.io/zenvia-openapi-spec/v2/#tag/Templates/paths/~1templates/post
+
+        Args:
+            id [str]: ID associated with the template.
+        Kwargs:
+            No Kwargs.
+        Return:
+            Return a template from Zenvia.
+        """
+        endpoint = "templates/{}".format(id)
+        return self.request_get(endpoint=endpoint, **kwargs)

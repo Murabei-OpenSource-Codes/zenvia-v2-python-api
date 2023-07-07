@@ -47,5 +47,4 @@ zenvia_api.whatsapp_send_templated(
         "productName": "Chuchu bem gostoso",
         "deliveryDate": "11/01/2023",
     })
-
 ```
