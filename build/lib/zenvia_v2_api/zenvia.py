@@ -275,11 +275,6 @@ class ZenviaAPI:
                 raise ZenviaAPIFunctionValidation(
                     "criteria_direction not in [IN, OUT]")
 
-        val_webhook_url = validators.url(webhook_url)
-        if not val_webhook_url:
-            raise ZenviaAPIFunctionValidation(
-                "webhook_url is not a well formated url")
-
         data = {}
         if event_type == "MESSAGE":
             data = {
